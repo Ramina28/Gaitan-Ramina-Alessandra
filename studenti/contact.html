@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact - Sala de Jocuri FunZone</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<button id="btnTop" title="Înapoi sus">↑</button>
+
+
+<body>
+
+    <a href="Pagina principala.html" class="buton-inapoi">←</a>
+
+    <div class="container">
+        <h1>Contactează-ne</h1>
+        <p class="intro">Ai întrebări sau vrei să faci o rezervare specială? Trimite-ne un mesaj folosind formularul de mai jos, iar echipa noastră îți va răspunde cât mai curând.</p>
+
+        <form action="salveaza_contact.php" method="post">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nume">Nume complet</label>
+                    <input type="text" id="nume" name="nume" placeholder="Ex: Andrei Popescu" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Ex: andrei@email.com" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="telefon">Telefon</label>
+                <input type="text" id="telefon" name="telefon" placeholder="Ex: 07xx xxx xxx" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mesaj">Mesajul tău</label>
+                <textarea id="mesaj" name="mesaj" rows="6" placeholder="Scrie mesajul aici..." required></textarea>
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" id="acord" required>
+                <label for="acord">Sunt de acord cu prelucrarea datelor mele personale.</label>
+            </div>
+
+            <button type="submit">Trimite mesajul</button>
+        </form>
+
+        <div class="info">
+            <h2>Date de contact</h2>
+            <p><strong>Adresă:</strong> Str. Florilor nr. 10, Brașov</p>
+            <p><strong>Telefon:</strong> 0712 345 678</p>
+            <p><strong>Email:</strong> contact@funzone.ro</p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

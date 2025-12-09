@@ -1,0 +1,302 @@
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #202020;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+
+body,
+html {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(44, 62, 80, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    z-index: 10;
+}
+
+.navbar .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-right: 100px;
+}
+
+.navbar .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+    color: #1abc9c;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url('https://dash.ro/wp-content/uploads/2022/09/bowling-1920x1280.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 24px;
+    max-width: 800px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.descriere {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.descriere h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.descriere p {
+    font-size: 18px;
+    color: #34495e;
+    line-height: 1.6;
+}
+
+#btnTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 22px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#btnTop:hover {
+    background-color: #1a252f;
+}
+
+aside {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-left: 2px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: sticky;
+    top: 100px;
+}
+
+aside h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+aside ul {
+    padding-left: 20px;
+}
+
+aside li {
+    margin: 10px 0;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 20px;
+    align-items: center;
+}
+
+
+/* =================== MEDIA QUERY PENTRU MOBIL (<900px) =================== */
+
+@media (max-width: 900px) {
+    /* Navbar - meniul devine vertical */
+    .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+    .navbar .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        margin-right: 0;
+    }
+    /* Fonturi mai mari pentru lizibilitate */
+    body {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+    .hero h1 {
+        font-size: 32px;
+        /* mai mic decât pe desktop */
+        padding: 0 10px;
+        /* pentru a nu depăși ecranul */
+    }
+    .hero p {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+    .descriere h2 {
+        font-size: 28px;
+    }
+    .descriere p {
+        font-size: 16px;
+    }
+    /* Grid content - trece pe un singur rând */
+    .content-grid {
+        display: block;
+    }
+    aside {
+        position: static;
+        /* sticky devine static pe mobil */
+        margin-top: 20px;
+    }
+    /* Hero background-ul rămâne, dar textul se centrează */
+    .hero {
+        text-align: center;
+        padding: 80px 20px;
+        /* reduce înălțimea pe mobil */
+    }
+}
+
+
+/* ================== SECȚIUNE ÎNTREBĂRI FRECVENTE (FAQ) ================== */
+
+.faq {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+    text-align: left;
+}
+
+.faq h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.faq-list {
+    margin-top: 20px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    width: 100%;
+    background-color: #ecf0f1;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:hover {
+    background-color: #dce4ec;
+}
+
+.faq-toggle {
+    font-size: 20px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 20px 15px 20px;
+    background-color: #fff;
+    color: #34495e;
+    line-height: 1.5;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+    /* + devine X */
+}
+
+.faq-empty {
+    text-align: center;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+
+/* Responsive FAQ */
+
+@media (max-width: 900px) {
+    .faq {
+        padding: 30px 15px;
+    }
+    .faq h2 {
+        font-size: 26px;
+    }
+    .faq-question {
+        font-size: 15px;
+        padding: 12px 15px;
+    }
+    .faq-answer {
+        padding: 0 15px 12px 15px;
+    }
+}

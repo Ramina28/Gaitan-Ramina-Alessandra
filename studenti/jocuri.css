@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.buton-inapoi {
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 12px;
+    border-radius: 5px;
+    z-index: 100;
+    transition: background 0.3s;
+}
+
+.buton-inapoi:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.hero {
+    position: relative;
+    height: 70vh;
+    background-image: url('https://dash.ro/wp-content/uploads/2018/10/bowling.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+.continut {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.continut h2 {
+    color: #2c3e50;
+    margin-top: 50px;
+}
+
+.continut img {
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.slider {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.slide-container {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.slide-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    border-radius: 10px;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: -40px;
+}
+
+.next {
+    right: -40px;
+}
+
+#btnTop {
+    display: none;
+    /* ascuns inițial */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    font-size: 22px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#btnTop:hover {
+    background-color: #1a252f;
+}
+
+#btnTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 22px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#btnTop:hover {
+    background-color: #1a252f;
+}
+
+
+/* =================== MEDIA QUERY PENTRU MOBIL (<900px) =================== */
+
+@media (max-width: 900px) {
+    .hero {
+        height: 50vh;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .continut {
+        padding: 0 15px;
+    }
+    .continut h2 {
+        font-size: 1.5rem;
+        margin-top: 30px;
+    }
+    .continut p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+    .slider {
+        width: 95%;
+        margin: 15px auto;
+    }
+    .slide-container {
+        height: 250px;
+    }
+    .prev,
+    .next {
+        font-size: 20px;
+        padding: 8px 12px;
+    }
+    .continut img {
+        display: block;
+        margin: 10px auto;
+        max-width: 100%;
+        height: auto;
+    }
+    .buton-inapoi {
+        font-size: 18px;
+        padding: 6px 10px;
+    }
+    #btnTop {
+        font-size: 20px;
+        padding: 10px 14px;
+    }
+}

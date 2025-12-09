@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rezervări - Sala de Jocuri FunZone</title>
+    <link rel="stylesheet" href="rezervari.css">
+</head>
+
+<button id="btnTop" title="Înapoi sus">↑</button>
+
+<body>
+
+    <a href="Pagina principala.html" class="buton-inapoi">←</a>
+
+    <h1>Rezervări Sala de Jocuri FunZone</h1>
+
+    <p>Completează formularul de mai jos pentru a-ți face o rezervare la unul dintre jocurile noastre.</p>
+
+    <form action="salveaza_rezervari.php" method="post">
+        <label for="nume">Nume complet:</label><br>
+        <input type="text" id="nume" name="nume" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="telefon">Telefon:</label><br>
+        <input type="text" id="telefon" name="telefon" required><br><br>
+
+        <label for="joc">Joc:</label><br>
+        <select id="joc" name="joc" required>
+            <option value="">--Alege jocul--</option>
+            <option value="biliard">Biliard</option>
+            <option value="bowling">Bowling</option>
+            <option value="pingpong">Ping Pong</option>
+            <option value="catarari">Cățărări</option>
+            <option value="minigolf">Minigolf</option>
+        </select><br><br>
+
+        <label for="data">Data rezervării:</label><br>
+        <input type="date" id="data" name="data" required><br><br>
+
+        <label for="ora">Ora:</label><br>
+        <input type="time" id="ora" name="ora" required><br><br>
+
+        <input type="submit" value="Trimite rezervarea">
+    </form>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
